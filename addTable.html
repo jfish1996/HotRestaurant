@@ -76,6 +76,13 @@
                     uniqueID: $("#uniqueID").val().trim()
                   };
                   console.log(newTable);
+
+
+                  $.post("/api/reservations", newTable)
+        .then(function(data) {
+          console.log("addTable.html", data);
+          alert("Adding Table...");
+        });
                 
                 });
               </script>
