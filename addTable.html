@@ -75,7 +75,14 @@
                     email: $("#email").val().trim(),
                     uniqueID: $("#uniqueID").val().trim()
                   };
-                  
+                  console.log(newTable);
+
+
+                  $.post("/api/reservation", newTable)
+        .then(function(data) {
+          console.log("addTable.html", data);
+          alert("Adding Table...");
+        });
                 
                 });
               </script>
